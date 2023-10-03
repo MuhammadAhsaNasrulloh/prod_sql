@@ -1,0 +1,11 @@
+JOIN SQL
+
+//SELECT tb_employee.id_job,tb_employee.full_name, tb_employee.date_birth, tb_jobs.name_jobs
+FROM tb_employee
+INNER JOIN tb_jobs ON tb_employee.id_job=tb_jobs.name_jobs; 
+
+JOIN LEFT
+//SELECT tb_employee.id_job, tb_employee.full_name, tb_jobs.name_jobs
+FROM tb_employee
+LEFT JOIN tb_jobs ON tb_employee.id_job = tb_jobs.id_job
+ORDER BY tb_employee.full_name ASC;

@@ -1,0 +1,19 @@
+/*SELECT COUNT(kode_obat) FROM `tb_obat_ahsan_melvia` WHERE jenis='Obat Bebas';*/
+/* MENGHITUNG TOTAL HARGA JUAL*/
+/*SELECT SUM(harga_jual) FROM `tb_obat_ahsan_melvia`;*/
+/*MENGAMBIL RATA RATA LABA*/
+/*SELECT AVG(harga_jual-harga_beli) FROM `tb_obat_ahsan_melvia`;*/
+/*HARGA JUAL TERTINGGI & TERENDAH
+SELECT MAX(harga_jual) AND FROM `tb_obat_ahsan_melvia`;
+SELECT MIN(harga_jual) FROM `tb_obat_ahsan_melvia`;*/
+/*SELECT satuan, COUNT(stok) AS total_stok FROM `tb_obat_ahsan_melvia` GROUP BY satuan;*/
+/*SELECT nama_obat, stok, harga_beli, harga_jual,
+(harga_beli*stok) AS total_harga_beli, 
+(harga_jual*stok) As total_harga_jual,
+((harga_jual-harga_beli)* stok) as laba FROM `tb_obat_ahsan_melvia`;*/
+SELECT satuan, AVG(harga_jual) AS rerata_harga_jual FROM `tb_obat_ahsan_melvia`
+WHERE satuan!='lembar' GROUP BY satuan;
+SELECT
+MIN(harga_beli) AS harga_terendah,
+MAX(harga_beli) as harga_tertinggi
+FROM `tb_obat_ahsan_melvia`;
